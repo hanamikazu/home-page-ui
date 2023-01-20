@@ -51,7 +51,13 @@ class _HomePageState extends State<HomePage> {
             toolbarHeight: 50,
             elevation: 0.5,
             backgroundColor: const Color(0xFF00ACC1),
-            shadowColor: const Color(0xFF00BCD4),
+            shadowColor: const Color(0xFF00838F),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50)
+              )
+            ),
           ),
           floatingActionButton: FloatingActionButton.extended(
             onPressed: () async{
@@ -69,10 +75,10 @@ class _HomePageState extends State<HomePage> {
                   color: const Color(0xFFE0F7FA),
                   elevation: 10,
                   shadowColor: const Color(0xFF00838F),
-                  shape: const BeveledRectangleBorder(
-                  side: BorderSide(color: Color(0xFF0097A7), width: 5),
-                  borderRadius: BorderRadius.only(topLeft: Radius.elliptical(120, 65)),),
-                  margin: const EdgeInsets.all(20),
+                  shape: const StadiumBorder(
+                  side: BorderSide(color: Color(0xFF0097A7), width: 2.0),
+                  ),
+                  margin: const EdgeInsets.all(5),
                   child:  ListTile(
                     leading: Text(userInformation[index]['name'],
                       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20) ,),
